@@ -193,7 +193,7 @@ Embed LibBIN in your C++ project by including the header and linking the static 
 #include <iostream>
 
 int main() {
-    if (!LibBIN::Lookup::load_bins("data/bin_data.csv")) {
+    if (!LibBIN::Lookup::load_bins()) {
         std::cerr << "Failed to load BIN database\n";
         return 1;
     }
