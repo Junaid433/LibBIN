@@ -14,6 +14,14 @@ set(SOURCES
 add_library(BIN STATIC ${SOURCES})
 target_include_directories(BIN PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
+add_executable(bin_lookup
+    main.cpp
+    src/lookup.cpp
+    src/result.cpp
+)
+target_link_libraries(bin_lookup PRIVATE pthread)
+target_include_directories(bin_lookup PRIVATE ${PROJECT_SOURCE_DIR}/include)
+
 include(FetchContent)
 
 FetchContent_Declare(
@@ -67,7 +75,7 @@ target_include_directories(run_benchmark PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
 add_test(NAME Benchmark COMMAND run_benchmark)
 
-install(TARGETS BIN run_tests run_benchmark
+install(TARGETS BIN run_tests run_benchmark bin_lookup
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib)
