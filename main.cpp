@@ -145,7 +145,7 @@ int main(int argc, char* argv[]) {
         opts.out_stream = &opts.owned_ofstream;
     }
 
-    LibBIN::Lookup::load_bins("data/bin_data.csv");
+    LibBIN::Lookup::load_bins();
 
     if (!opts.bin.empty()) {
         auto result = LibBIN::Lookup::Search(opts.bin);

@@ -11,7 +11,7 @@ using namespace LibBIN;
 class LookupTest : public ::testing::Test {
 protected:
     static void SetUpTestSuite() {
-        Lookup::load_bins("data/bin_data.csv");
+        Lookup::load_bins();
     }
 };
 
