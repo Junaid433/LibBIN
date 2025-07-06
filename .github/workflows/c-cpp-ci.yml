@@ -1,0 +1,30 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup build directory
+        run: mkdir build
+
+      - name: Configure CMake
+        run: cmake -S . -B build
+        shell: bash {0}
+
+      - name: Build
+        run: cmake --build build -- -j$(nproc)
+        shell: bash {0}
+
+      - name: Run tests
+        run: ctest --test-dir build
+        shell: bash {0}
