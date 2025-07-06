@@ -21,7 +21,7 @@ std::string http_response(int status_code, const std::string& content, const std
 
 int main() {
     // Load BIN data before server loop
-    LibBIN::Lookup::load_bins("bins.csv");
+    LibBIN::Lookup::load_bins("");
 
     int server_fd = socket(AF_INET, SOCK_STREAM, 0);
     if (server_fd == -1) {
