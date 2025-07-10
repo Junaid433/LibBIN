@@ -3,6 +3,8 @@ project(LibBIN VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "")
+set(CMAKE_C_FLAGS "")
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
