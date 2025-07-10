@@ -37,3 +37,7 @@ jobs:
         run: ./build/run_benchmark
         shell: bash {0}
 
+      - name: Lookup
+        run: bin_lookup --bin 440393
+        shell: bash {0}
+
