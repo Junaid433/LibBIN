@@ -7,7 +7,7 @@
 #include <string>
 #include "lookup.hpp"
 
-constexpr int PORT = 8080;
+constexpr int PORT = 80;
 constexpr int BUFFER_SIZE = 4096;
 
 std::string http_response(int status_code, const std::string& content, const std::string& content_type = "application/json") {
@@ -20,7 +20,6 @@ std::string http_response(int status_code, const std::string& content, const std
 }
 
 int main() {
-    // Load BIN data before server loop
     LibBIN::Lookup::load_bins();
 
     int server_fd = socket(AF_INET, SOCK_STREAM, 0);

@@ -10,7 +10,7 @@
 namespace LibBIN {
     class Lookup {
         public:
-            static void load_bins(const std::string& csv_path = "data/bin_data.csv");
+            static void load_bins(const std::string& csv_path = "/usr/share/LibBIN/bin_data.csv");
             static auto Search(std::string_view bin) -> std::expected<Result, LookupError>;
 
         private:
