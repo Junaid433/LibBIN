@@ -67,7 +67,7 @@ LibBIN/
 git clone https://github.com/Junaid433/LibBIN.git
 cd LibBIN
 mkdir build && cd build
-cmake ..
+cmake -DCMAKE_INSTALL_PREFIX=/ ..
 make -j$(nproc)
 sudo make install
 ```
