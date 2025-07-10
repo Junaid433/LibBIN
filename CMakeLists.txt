@@ -83,4 +83,4 @@ install(TARGETS BIN run_tests run_benchmark bin_lookup
         ARCHIVE DESTINATION lib)
 
 install(FILES "${CMAKE_SOURCE_DIR}/data/bin_data.csv"
-        DESTINATION usr/share/LibBIN)
+        DESTINATION /usr/share/LibBIN)
