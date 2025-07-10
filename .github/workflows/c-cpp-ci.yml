@@ -18,7 +18,7 @@ jobs:
         run: mkdir build
 
       - name: Configure CMake
-        run: cmake -S . -B build
+        run: cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr
         shell: bash {0}
 
       - name: Build
