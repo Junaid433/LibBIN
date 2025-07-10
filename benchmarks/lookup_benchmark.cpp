@@ -49,7 +49,7 @@ static void BM_Lookup_NotFound(benchmark::State& state) {
 
 static void BM_LoadBinsOnce(benchmark::State& state) {
     for (auto _ : state) {
-        std::ifstream file("data/bin_data.csv");
+        std::ifstream file("/usr/share/LibBIN/bin_data.csv");
         benchmark::DoNotOptimize(file);
         std::unordered_map<std::string, Result> map;
         std::string line;
